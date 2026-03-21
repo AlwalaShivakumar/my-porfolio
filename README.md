@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
+
+A premium, fully responsive personal portfolio website built with Next.js 14, Tailwind CSS, and Framer Motion. 
+
+## Features
+- **Modern UI**: Dark/light mode theme using Tailwind CSS and elegant animations with Framer Motion.
+- **Dynamic Data**: Fetches GitHub profile stats and pinned/top repositories dynamically.
+- **Experience Timeline**: A responsive vertical timeline displaying work experience and education.
+- **GitHub Heatmap**: Displays open-source contribution statistics using integrating a heatmap.
+- **Contact Form**: Aesthetic form UI ready to be connected with EmailJS.
+- **SEO Optimized**: Fully leverages Next.js App Router metadata conventions.
+
+## Tech Stack
+- Frontend: Next.js 14, React 18
+- Styling: Tailwind CSS
+- Animations: Framer Motion
+- Icons: Lucide React
+- Fonts: Inter & Outfit (Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone or download the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Configure Environment Variables
+   Rename `.env.example` to `.env.local` and add your required keys (if any email integrations are configured).
+   ```bash
+   cp .env.example .env.local
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Run the development server
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
+- **Profile Configuration**: Update `src/lib/data.ts` to edit your personal biography, skills, education, and LinkedIn experience data.
+- **GitHub Username**: Change the static `GITHUB_USERNAME` constant in `src/lib/github.ts` to point to your GitHub profile.
+- **Theme**: Colors and border radii are configured in `src/app/globals.css`.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+This project is Next.js based and Zero-Config ready for Vercel. 
+1. Push this repository to GitHub.
+2. Link the repository to vercel via the Vercel Dashboard.
+3. Your portfolio will automatically deploy!
