@@ -1,0 +1,20 @@
+.sk-scene{position:relative;width:100%;height:100%;min-width:0;min-height:420px;isolation:isolate;touch-action:pan-y}
+.sk-keyboard{position:relative;width:100%;height:100%;min-height:inherit;--sk-fallback-rotation:-15deg}
+.sk-webgl-canvas{position:absolute;inset:0;width:100%;height:100%;display:none;pointer-events:none;filter:drop-shadow(0 27px 25px #0007)}
+.sk-key-grid{position:absolute;inset:auto 12%;top:50%;height:max-content;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px 10px;padding:22px;background:linear-gradient(150deg,#323741,#101319 80%);border:1px solid #48505b;border-radius:25px;box-shadow:0 13px 0 #0b0e13,0 35px 30px #0007;transform:translateY(-50%) perspective(900px) rotateX(27deg) rotateZ(var(--sk-fallback-rotation));transform-style:preserve-3d}
+.sk-key{appearance:none;position:relative;box-sizing:border-box;display:grid;place-items:center;min-width:0;aspect-ratio:1;border:1px solid color-mix(in srgb,var(--sk-key-color),white 22%);border-radius:10px;padding:0;color:#fff;background:linear-gradient(145deg,#ffffff38,transparent 55%),var(--sk-key-color);box-shadow:inset 0 2px 2px #ffffff55,0 8px 0 color-mix(in srgb,var(--sk-key-color),black 35%),0 12px 8px #0005;cursor:pointer;outline-offset:3px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;font:inherit;transition:transform 160ms ease,box-shadow 160ms ease}
+.sk-key-glyph{font-family:Arial,sans-serif;font-size:clamp(13px,1.5vw,24px);font-weight:800;line-height:1;letter-spacing:-.04em;max-width:100%;text-align:center;pointer-events:none}
+.sk-key[data-key="LangChain"] .sk-key-glyph,.sk-key[data-key="Supabase"] .sk-key-glyph{font-size:clamp(8px,1vw,13px)}
+.sk-key:focus-visible{outline:2px solid #fff!important;outline-offset:4px}
+.sk-key.is-selected,.sk-key:active{transform:translateY(5px);box-shadow:inset 0 2px 2px #ffffff33,0 3px 0 color-mix(in srgb,var(--sk-key-color),black 35%),0 5px 5px #0005}
+.sk-hit-shape{display:none;pointer-events:none}
+.sk-webgl .sk-webgl-canvas{display:block}
+.sk-webgl .sk-key-grid{inset:0;height:100%;display:block;padding:0;border:0;border-radius:0;box-shadow:none;background:none;transform:none;transform-style:flat;pointer-events:none}
+.sk-webgl .sk-key{position:absolute;display:block;aspect-ratio:auto;margin:0;padding:0;border:0!important;border-radius:0;box-shadow:none!important;background:transparent!important;transform:none!important;transition:none;pointer-events:auto;outline:none!important;outline-offset:0;overflow:hidden}
+.sk-webgl .sk-key-glyph{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.sk-webgl .sk-hit-shape{position:absolute;inset:0;display:block;width:100%;height:100%;fill:none;stroke:#fff;stroke-width:2;stroke-linejoin:round;opacity:0;overflow:visible}
+.sk-webgl .sk-key:focus-visible .sk-hit-shape{opacity:1}
+.sk-reduced-motion .sk-key{transition:none}
+@media(hover:hover){.sk-keyboard:not(.sk-webgl) .sk-key:hover:not(.is-selected){transform:translateY(-3px)}}
+@media(max-width:600px){.sk-scene{min-height:350px}.sk-key-grid{inset:auto 11%;top:50%;gap:10px 8px;padding:17px;border-radius:20px}.sk-key{border-radius:8px}.sk-key-glyph{font-size:17px}.sk-key[data-key="LangChain"] .sk-key-glyph,.sk-key[data-key="Supabase"] .sk-key-glyph{font-size:8px}.sk-webgl .sk-key-grid{inset:0;padding:0}.sk-webgl-canvas{filter:drop-shadow(0 18px 18px #0006)}}
+@media(prefers-reduced-motion:reduce){.sk-key{transition:none!important}}
